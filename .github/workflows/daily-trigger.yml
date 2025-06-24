@@ -3,7 +3,7 @@ name: Trigger Dutch Bot
 on:
   workflow_dispatch:
   schedule:
-    - cron: '45 10 * * *'
+    - cron: '30 11 * * *'
 
 
 jobs:
