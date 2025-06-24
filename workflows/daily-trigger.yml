@@ -1,16 +1,1 @@
-name: Trigger Dutch Bot
 
-on:
-  workflow_dispatch:
-  schedule:
-    - cron: '30 8 * * *'
-
-
-jobs:
-  trigger:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Hit Replit endpoint
-        run: |
-          curl -fsS https://dutch-daily-bot.forcethehome.repl.co/ \
-            || { echo "✖ Failed to trigger bot"; exit 1; }
